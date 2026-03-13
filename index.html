@@ -1,145 +1,443 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Abhay | Portfolio</title>
-  <style>
-    * { margin:0; padding:0; box-sizing:border-box; font-family:'Poppins', sans-serif; }
-    body { background-color:#0d0d0d; color:#f5f5f5; scroll-behavior:smooth; overflow-x:hidden; }
-    
-    /* NAVBAR */
-    nav {
-      position:fixed; top:0; width:100%;
-      background:rgba(0,0,0,0.8);
-      display:flex; justify-content:space-between; align-items:center;
-      padding:12px 40px; z-index:1000;
-      border-bottom:1px solid #222; backdrop-filter:blur(10px);
-    }
-    nav .logo { color:#ffcc00; font-size:1.4rem; font-weight:700; letter-spacing:1px; }
-    nav ul { list-style:none; display:flex; gap:20px; }
-    nav ul li a { color:#f5f5f5; text-decoration:none; font-weight:500; padding:8px 14px; border-radius:20px; transition:0.3s ease; }
-    nav ul li a:link, nav ul li a:visited { color:#f5f5f5; text-decoration:none; }
-    nav ul li a:hover { background-color:#ffcc00; color:#000; }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    /* HEADER */
-    header { display:flex; flex-direction:column; align-items:center; text-align:center; padding:120px 20px 60px; }
-    .profile-pic { width:220px; height:220px; border-radius:50%; border:4px solid #ffcc00; overflow:hidden; margin-bottom:20px; box-shadow:0 0 20px #ffcc00; transition:0.3s ease; }
-    .profile-pic:hover { transform:scale(1.05); box-shadow:0 0 30px #ffcc00; }
-    .profile-pic img { width:100%; height:100%; object-fit:cover; }
-    h1 { font-size:2.5rem; color:#ffcc00; }
-    h2 { margin-top:8px; font-weight:400; font-size:1.2rem; color:#d9d9d9; }
+<title>Abhay Chaudhary | Portfolio</title>
 
-    /* SECTIONS */
-    section { max-width:900px; margin:40px auto; padding:0 20px; }
-    .section-title { color:#ffcc00; font-size:1.6rem; margin-bottom:15px; border-left:4px solid #ffcc00; padding-left:10px; }
-    p { line-height:1.7; color:#cccccc; }
+<meta name="description" content="Abhay Chaudhary - Web Developer, Cybersecurity Student, Full Stack Developer Portfolio">
 
-    .skills-list { display:flex; flex-wrap:wrap; gap:10px; margin-top:10px; }
-    .skill { background-color:#1a1a1a; color:#ffcc00; border:1px solid #ffcc00; border-radius:20px; padding:8px 16px; transition:0.3s ease; }
-    .skill:hover { background-color:#ffcc00; color:#000; transform:scale(1.05); }
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    ul { margin-left:20px; margin-top:5px; line-height:1.6; }
-    ul li a { color:#ffcc00; text-decoration:none; }
-    ul li a:hover { text-decoration:underline; }
+<style>
 
-    footer { text-align:center; padding:30px; color:#888; font-size:0.9rem; border-top:1px solid #222; margin-top:50px; }
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
 
-    @media (max-width:700px) {
-      nav { flex-direction:column; gap:10px; padding:10px 20px; }
-      nav ul { flex-wrap:wrap; justify-content:center; }
-      h1 { font-size:2rem; }
-      h2 { font-size:1rem; }
-    }
-  </style>
+body{
+background:#0d0d0d;
+color:#f5f5f5;
+scroll-behavior:smooth;
+overflow-x:hidden;
+}
+
+/* NAVBAR */
+
+nav{
+position:fixed;
+top:0;
+width:100%;
+background:rgba(0,0,0,0.8);
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:12px 40px;
+border-bottom:1px solid #222;
+backdrop-filter:blur(10px);
+z-index:1000;
+}
+
+.logo{
+color:#ffcc00;
+font-weight:700;
+font-size:1.3rem;
+}
+
+nav ul{
+list-style:none;
+display:flex;
+gap:20px;
+}
+
+nav ul li a{
+text-decoration:none;
+color:#f5f5f5;
+padding:8px 14px;
+border-radius:20px;
+transition:0.3s;
+font-size:14px;
+}
+
+nav ul li a:hover{
+background:#ffcc00;
+color:#000;
+}
+
+/* HEADER */
+
+header{
+display:flex;
+flex-direction:column;
+align-items:center;
+text-align:center;
+padding:120px 20px 60px;
+}
+
+.profile-pic{
+width:220px;
+height:220px;
+border-radius:50%;
+border:4px solid #ffcc00;
+overflow:hidden;
+margin-bottom:20px;
+box-shadow:0 0 20px #ffcc00;
+transition:0.3s;
+}
+
+.profile-pic:hover{
+transform:scale(1.05);
+box-shadow:0 0 30px #ffcc00;
+}
+
+.profile-pic img{
+width:100%;
+height:100%;
+object-fit:cover;
+}
+
+h1{
+font-size:2.5rem;
+color:#ffcc00;
+}
+
+h2{
+font-weight:400;
+font-size:1.2rem;
+color:#ccc;
+margin-top:8px;
+}
+
+.hero-buttons{
+margin-top:20px;
+}
+
+.hero-buttons a{
+text-decoration:none;
+padding:10px 20px;
+border-radius:25px;
+margin:5px;
+display:inline-block;
+font-size:14px;
+}
+
+.btn-project{
+background:#ffcc00;
+color:#000;
+}
+
+.btn-hire{
+border:1px solid #ffcc00;
+color:#ffcc00;
+}
+
+/* SECTION */
+
+section{
+max-width:900px;
+margin:40px auto;
+padding:0 20px;
+}
+
+.section-title{
+font-size:1.6rem;
+color:#ffcc00;
+margin-bottom:15px;
+border-left:4px solid #ffcc00;
+padding-left:10px;
+}
+
+p{
+line-height:1.7;
+color:#ccc;
+}
+
+/* SKILLS */
+
+.skills-list{
+display:flex;
+flex-wrap:wrap;
+gap:10px;
+margin-top:10px;
+}
+
+.skill{
+background:#1a1a1a;
+border:1px solid #ffcc00;
+color:#ffcc00;
+padding:8px 16px;
+border-radius:20px;
+font-size:14px;
+transition:0.3s;
+}
+
+.skill:hover{
+background:#ffcc00;
+color:#000;
+transform:scale(1.05);
+}
+
+/* PROJECT */
+
+ul{
+margin-left:20px;
+line-height:1.6;
+}
+
+ul li a{
+color:#ffcc00;
+text-decoration:none;
+}
+
+ul li a:hover{
+text-decoration:underline;
+}
+
+/* FOOTER */
+
+footer{
+text-align:center;
+padding:30px;
+color:#888;
+font-size:14px;
+border-top:1px solid #222;
+margin-top:50px;
+}
+
+/* MOBILE */
+
+@media (max-width:700px){
+
+nav{
+flex-direction:column;
+gap:10px;
+padding:10px 20px;
+}
+
+nav ul{
+flex-wrap:wrap;
+justify-content:center;
+}
+
+h1{
+font-size:2rem;
+}
+
+h2{
+font-size:1rem;
+}
+
+}
+
+</style>
 </head>
+
+
 <body>
 
-  <!-- NAVBAR -->
-  <nav>
-    <div class="logo"> 🌐 TechCoder | 🛡 CyberSecurity Analyst</div>
-    <ul>
-  <li><a href="https://github.com/AbhayTechCoder">GitHub</a></li>
-  <li><a href="#about">About</a></li>
-  <li><a href="#skills">Skills</a></li>
-  <li>
-    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=chaudharyabhay32894@gmail.com" target="_blank">
-      Contact
-    </a>
-  </li>
-  <li>
-    <a href="https://in.linkedin.com/in/abhay-chaudhary-b24697263" target="_blank">
-      LinkedIn
-    </a>
-  </li>
-  <li>
-  <a href="https://docs.google.com/document/d/1uWVcV1D8-H-8pfFgeWG6ujG9IAgJt368NeHhe1GvniY/export?format=pdf" 
-     target="_blank" 
-     download="Resume.pdf">
-    Resume ⬇
-  </a>
+<!-- NAVBAR -->
+
+<nav>
+
+<div class="logo">🌐 TechCoder | 🛡 Cybersecurity</div>
+
+<ul>
+
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#projects">Projects</a></li>
+
+<li>
+<a href="https://github.com/AbhayTechCoder" target="_blank">
+GitHub
+</a>
 </li>
+
+<li>
+<a href="https://in.linkedin.com/in/abhay-chaudhary-b24697263" target="_blank">
+LinkedIn
+</a>
+</li>
+
+<li>
+<a href="mailto:chaudharyabhay32894@gmail.com">
+Contact
+</a>
+</li>
+
+<li>
+<a href="https://docs.google.com/document/d/1uWVcV1D8-H-8pfFgeWG6ujG9IAgJt368NeHhe1GvniY/export?format=pdf" target="_blank">
+Resume ⬇
+</a>
+</li>
+
 </ul>
-  </nav>
 
-  <!-- HEADER -->
-  <header>
-    <div class="profile-pic">
-      <img src="https://avatars.githubusercontent.com/u/142333047?v=4" alt="Profile Photo">
-    </div>
-    <h1>Abhay Chaudhary</h1>
-    <h2>Web Developer | Cybersecurity Student | Tech Enthusiast</h2>
-  </header>
+</nav>
 
-  <!-- ABOUT -->
-  <section id="about">
-    <h3 class="section-title">About Me</h3>
-    <p>
-      I’m Abhay Chaudhary, a B.Tech CSE student with a strong interest in web development, cybersecurity, and data-driven technologies. 
-      I enjoy building creative and efficient digital solutions while constantly learning new tools and frameworks. 
-      With hands-on experience in ethical hacking and real-world projects, I aim to bridge innovation with practicality. 
-      I’m passionate about continuous learning, problem-solving, and turning ideas into impactful technology.
-    </p>
-  </section>
 
-  <!-- SKILLS -->
-  <section id="skills">
-    <h3 class="section-title">Skills</h3>
-    <div class="skills-list">
-      <div class="skill">HTML</div>
-      <div class="skill">CSS</div>
-      <div class="skill">JavaScript</div>
-      <div class="skill">Python</div>
-      <div class="skill">Cybersecurity</div>
-      <div class="skill">Web Testing</div>
-    </div>
-  </section>
+<!-- HEADER -->
 
-  <!-- PROJECTS -->
-  <section id="projects">
-    <h3 class="section-title">Projects</h3>
-    
-    <!-- Web Development -->
-    <h4 style="color:#ffcc00; margin-top:10px;">Web Development</h4>
-    <ul style="color:#cccccc;">
-      
-      <li><strong>TODO List App:</strong> Task management app with CRUD operations and local storage. <a href="#" target="_blank">Not Deployed</a></li>
-      <li><strong>QR Restaurant Management System:</strong> Web-based system for QR-based ordering and table management. <a href="https://abhay-tech-coder-abhay-tech-coder-r-virid.vercel.app/" target="_blank">Live Demo</a></li>
-      <li><strong>Personal AI Assistant:</strong> Multiple AI agents performing tasks like reminders, web scraping, and automation. <a href="#" target="_blank">Work in Progress</a></li>
-    </ul>
+<header>
 
-    <!-- Cybersecurity -->
-    <h4 style="color:#ffcc00; margin-top:20px;">Cybersecurity</h4>
-    <ul style="color:#cccccc;">
-      <li><strong>Endpoint & Phishing Security Research:</strong> Identified disguised executable and reverse connection attack risks; implemented file validation and outbound monitoring to prevent phishing and unauthorized access.</li>
-      <li><strong>Web Application Security Testing:</strong> Used <strong>Burp Suite</strong> for request manipulation, parameter testing, and vulnerability assessment in lab-based web apps.</li>
-      <li><strong>Wireless Network Security Assessment:</strong> Captured WPA2 handshake, tested password strength, and analyzed network vulnerabilities using <strong>Kali Linux</strong>.</li>
-    </ul>
-  </section>
+<div class="profile-pic">
+<img src="https://avatars.githubusercontent.com/u/142333047?v=4">
+</div>
 
-  <footer>
-    © 2025 Abhay Chaudhary | Designed with Passion & Code
-  </footer>
+<h1>Abhay Chaudhary</h1>
+
+<h2>Web Developer | Cybersecurity Student | Tech Enthusiast</h2>
+
+<div class="hero-buttons">
+
+<a href="#projects" class="btn-project">
+View Projects
+</a>
+
+<a href="mailto:chaudharyabhay32894@gmail.com" class="btn-hire">
+Hire Me
+</a>
+
+</div>
+
+</header>
+
+
+<!-- ABOUT -->
+
+<section id="about">
+
+<h3 class="section-title">About Me</h3>
+
+<p>
+
+I’m Abhay Chaudhary, a B.Tech CSE student passionate about web development,
+cybersecurity, and building practical digital solutions.
+
+I enjoy developing full-stack applications using modern technologies and
+exploring security concepts like ethical hacking and web vulnerability testing.
+
+My goal is to create innovative technology solutions that solve real-world problems.
+
+</p>
+
+</section>
+
+
+<!-- SKILLS -->
+
+<section id="skills">
+
+<h3 class="section-title">Skills</h3>
+
+<div class="skills-list">
+
+<div class="skill">HTML</div>
+<div class="skill">CSS</div>
+<div class="skill">JavaScript</div>
+<div class="skill">Python</div>
+<div class="skill">Node.js</div>
+<div class="skill">Express.js</div>
+<div class="skill">MongoDB</div>
+<div class="skill">REST API</div>
+<div class="skill">JWT Auth</div>
+<div class="skill">Cybersecurity</div>
+<div class="skill">Burp Suite</div>
+<div class="skill">Kali Linux</div>
+
+</div>
+
+</section>
+
+
+<!-- PROJECTS -->
+
+<section id="projects">
+
+<h3 class="section-title">Projects</h3>
+
+
+<h4 style="color:#ffcc00">Web Development</h4>
+
+<ul>
+
+<li>
+
+<strong>TODO List App:</strong>
+
+Task management app with CRUD operations and local storage.
+
+</li>
+
+<li>
+
+<strong>QR Restaurant Management System:</strong>
+
+QR-based restaurant ordering system.
+
+<a href="https://abhay-tech-coder-abhay-tech-coder-r-virid.vercel.app/" target="_blank">
+
+Live Demo
+
+</a>
+
+</li>
+
+<li>
+
+<strong>Personal AI Assistant:</strong>
+
+Voice assistant performing automation tasks.
+
+</li>
+
+</ul>
+
+
+<h4 style="color:#ffcc00; margin-top:20px;">Cybersecurity</h4>
+
+<ul>
+
+<li>
+
+<strong>Endpoint & Phishing Security Research:</strong>
+
+Identified disguised executable and reverse connection risks and implemented file validation and monitoring.
+
+</li>
+
+<li>
+
+<strong>Web Application Security Testing:</strong>
+
+Performed vulnerability testing using Burp Suite including request manipulation and parameter testing.
+
+</li>
+
+<li>
+
+<strong>Wireless Network Security Assessment:</strong>
+
+Captured WPA2 handshake and analyzed network security using Kali Linux tools.
+
+</li>
+
+</ul>
+
+</section>
+
+
+<footer>
+
+© 2025 Abhay Chaudhary | Designed with Passion & Code
+
+</footer>
 
 </body>
+
 </html>
