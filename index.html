@@ -1,19 +1,14 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 <title>Abhay Chaudhary | Developer Portfolio</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
-
 *{
 margin:0;
 padding:0;
@@ -21,13 +16,17 @@ box-sizing:border-box;
 font-family:'Poppins',sans-serif;
 }
 
+html{
+scroll-behavior:smooth;
+}
+
 body{
 background:#000;
 color:#fff;
+overflow-x:hidden;
 }
 
 /* NAVBAR */
-
 nav{
 display:flex;
 justify-content:space-between;
@@ -36,7 +35,9 @@ padding:20px 40px;
 background:#0a0a0a;
 position:sticky;
 top:0;
+z-index:1000;
 border-bottom:1px solid #111;
+flex-wrap:wrap;
 }
 
 .logo{
@@ -47,40 +48,45 @@ color:#00ffd5;
 
 nav ul{
 display:flex;
-gap:30px;
+gap:25px;
 list-style:none;
+flex-wrap:wrap;
 }
 
 nav a{
 color:#ccc;
 text-decoration:none;
-transition:0.3s;
-padding:6px 12px;
-border-radius:6px;
+transition:.3s;
+padding:8px 12px;
+border-radius:8px;
 }
 
 nav a:hover{
 color:#00ffd5;
 background:#111;
-transform:scale(1.1);
 }
 
 /* HERO */
-
 .hero{
-height:90vh;
+min-height:90vh;
 display:flex;
-align-items:center;
 justify-content:center;
+align-items:center;
 text-align:center;
-padding:20px;
+padding:40px 20px;
+}
+
+.hero-content{
+max-width:700px;
+width:100%;
 }
 
 .hero img{
-width:240px;
+width:220px;
+max-width:80%;
 border-radius:50%;
 border:4px solid #00ffd5;
-box-shadow:0 0 35px rgba(0,255,213,0.6);
+box-shadow:0 0 35px rgba(0,255,213,.5);
 margin-bottom:25px;
 }
 
@@ -93,31 +99,37 @@ color:#00ffd5;
 }
 
 .hero p{
+margin-top:12px;
 color:#bbb;
-margin-top:10px;
 font-size:17px;
+line-height:1.6;
 }
 
 .buttons{
-margin-top:25px;
+margin-top:30px;
+display:flex;
+justify-content:center;
+gap:15px;
+flex-wrap:wrap;
 }
 
 .buttons a{
-padding:12px 28px;
+padding:12px 26px;
 border-radius:30px;
 text-decoration:none;
-margin:6px;
 font-size:14px;
-transition:0.3s;
+transition:.3s;
+display:inline-block;
 }
 
 .btn1{
 background:#00ffd5;
-color:black;
+color:#000;
+font-weight:600;
 }
 
 .btn1:hover{
-transform:scale(1.1);
+transform:scale(1.05);
 }
 
 .btn2{
@@ -126,17 +138,16 @@ color:#00ffd5;
 }
 
 .btn2:hover{
-transform:scale(1.1);
 background:#00ffd5;
-color:black;
+color:#000;
+transform:scale(1.05);
 }
 
 /* SECTION */
-
 section{
 max-width:1100px;
 margin:auto;
-padding:80px 20px;
+padding:70px 20px;
 }
 
 .title{
@@ -148,38 +159,34 @@ padding-left:10px;
 }
 
 /* ABOUT */
-
 .about p{
 color:#ccc;
-line-height:1.7;
+line-height:1.8;
 font-size:16px;
-max-width:900px;
 }
 
 /* TECH STACK */
-
 .skills-icons{
 display:flex;
 flex-wrap:wrap;
 justify-content:center;
-gap:55px;
+gap:40px;
 margin-top:30px;
 }
 
 .skills-icons i{
 font-size:55px;
 color:#ccc;
-transition:0.3s;
+transition:.3s;
 cursor:pointer;
 }
 
 .skills-icons i:hover{
 color:#00ffd5;
-transform:scale(1.35);
+transform:scale(1.2);
 }
 
 /* PROJECTS */
-
 .project-grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
@@ -188,7 +195,7 @@ gap:30px;
 
 .card{
 background:#0a0a0a;
-border-radius:15px;
+border-radius:18px;
 padding:15px;
 border:1px solid #111;
 transition:.3s;
@@ -196,152 +203,246 @@ transition:.3s;
 
 .card:hover{
 transform:translateY(-5px);
-border:1px solid #00ffd5;
+border-color:#00ffd5;
 }
 
 .card iframe{
 width:100%;
 height:220px;
 border:none;
-border-radius:10px;
+border-radius:12px;
 }
 
 .card-body{
-margin-top:10px;
+margin-top:15px;
 }
 
 .card-body h3{
-margin-bottom:8px;
+margin-bottom:10px;
 }
 
 .card-body p{
 font-size:14px;
 color:#bbb;
+line-height:1.6;
 }
 
 .card-body a{
 display:inline-block;
-margin-top:10px;
+margin-top:12px;
 color:#00ffd5;
 text-decoration:none;
 }
 
 /* GITHUB */
-
 .github{
 text-align:center;
 }
 
+.github-buttons{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+margin-bottom:30px;
+}
+
+.github-buttons a{
+padding:12px 25px;
+border-radius:30px;
+text-decoration:none;
+font-size:14px;
+transition:.3s;
+}
+
 .github img{
+width:100%;
 max-width:100%;
-margin:20px auto;
+margin:15px auto;
 display:block;
+border-radius:12px;
 }
 
 /* CONTACT */
-
 .contact{
 text-align:center;
 }
 
 .socials{
-margin-top:20px;
+margin-top:25px;
 display:flex;
 justify-content:center;
-gap:50px;
+gap:35px;
+flex-wrap:wrap;
+}
+
+.socials a{
+text-decoration:none;
 }
 
 .socials i{
-font-size:40px;
+font-size:38px;
 color:#ccc;
-transition:0.3s;
-cursor:pointer;
+transition:.3s;
 }
 
 .socials i:hover{
 color:#00ffd5;
-transform:scale(1.35);
+transform:scale(1.2);
 }
 
 /* FOOTER */
-
 footer{
 text-align:center;
 padding:30px;
 color:#777;
 border-top:1px solid #111;
+margin-top:30px;
 }
 
+/* MOBILE RESPONSIVE */
+@media (max-width:768px){
+
+nav{
+flex-direction:column;
+gap:15px;
+padding:20px;
+}
+
+nav ul{
+justify-content:center;
+gap:12px;
+}
+
+.hero{
+padding:60px 20px;
+min-height:auto;
+}
+
+.hero img{
+width:160px;
+}
+
+.hero h1{
+font-size:2rem;
+line-height:1.4;
+}
+
+.hero p{
+font-size:14px;
+}
+
+.buttons{
+flex-direction:column;
+align-items:center;
+}
+
+.buttons a{
+width:85%;
+text-align:center;
+}
+
+.title{
+font-size:1.6rem;
+}
+
+.skills-icons{
+gap:25px;
+}
+
+.skills-icons i{
+font-size:38px;
+}
+
+.project-grid{
+grid-template-columns:1fr;
+}
+
+.card iframe{
+height:190px;
+}
+
+.github-buttons{
+flex-direction:column;
+align-items:center;
+}
+
+.github-buttons a{
+width:85%;
+text-align:center;
+}
+
+.socials{
+gap:25px;
+}
+
+.socials i{
+font-size:30px;
+}
+}
+
+@media (max-width:480px){
+.hero h1{
+font-size:1.7rem;
+}
+
+.logo{
+font-size:1.3rem;
+}
+
+nav ul{
+gap:8px;
+font-size:14px;
+}
+
+.hero img{
+width:130px;
+}
+}
 </style>
-
 </head>
-
 <body>
 
 <!-- NAVBAR -->
-
 <nav>
-
-<div class="logo">Abhay.dev</div>
-
+<div class="logo">Er.Abhay</div>
 <ul>
-
 <li><a href="#">Home</a></li>
 <li><a href="#about">About</a></li>
 <li><a href="#skills">Tech</a></li>
 <li><a href="#projects">Projects</a></li>
 <li><a href="#contact">Contact</a></li>
-
 </ul>
-
 </nav>
 
 <!-- HERO -->
-
 <section class="hero">
-
-<div>
-
-<img src="https://avatars.githubusercontent.com/u/142333047?v=4">
-
+<div class="hero-content">
+<img src="https://avatars.githubusercontent.com/u/142333047?v=4" alt="Abhay">
 <h1>Hello I'm <span>Abhay</span></h1>
-
 <p>Full Stack Developer | Cybersecurity Enthusiast</p>
 
 <div class="buttons">
-
 <a class="btn1" href="#projects">View Projects</a>
-
 <a class="btn2" href="mailto:chaudharyabhay32894@gmail.com">Hire Me</a>
-
 </div>
-
 </div>
-
 </section>
 
 <!-- ABOUT -->
-
 <section id="about" class="about">
-
 <h2 class="title">About Me</h2>
-
 <p>
 I am a B.Tech Computer Science student passionate about building modern web applications and exploring cybersecurity.
 I specialize in JavaScript, Node.js, Express, MongoDB, and secure backend development.
 I enjoy creating scalable full-stack applications and performing security testing using tools like Burp Suite and Kali Linux.
 </p>
-
 </section>
 
-<!-- TECH STACK -->
-
+<!-- SKILLS -->
 <section id="skills">
-
 <h2 class="title">Tech Stack</h2>
-
 <div class="skills-icons">
-
 <i class="fab fa-html5"></i>
 <i class="fab fa-css3-alt"></i>
 <i class="fab fa-js"></i>
@@ -351,83 +452,66 @@ I enjoy creating scalable full-stack applications and performing security testin
 <i class="fab fa-linux"></i>
 <i class="fab fa-git-alt"></i>
 <i class="fab fa-github"></i>
-
 </div>
-
 </section>
 
 <!-- PROJECTS -->
-
 <section id="projects">
-
 <h2 class="title">Projects</h2>
 
 <div class="project-grid">
-
 <div class="card">
-
 <iframe src="https://abhay-tech-coder-abhay-tech-coder-r-virid.vercel.app/"></iframe>
-
 <div class="card-body">
-
 <h3>QR Restaurant System</h3>
-
 <p>Full stack QR ordering system built with Node.js and MongoDB.</p>
-
-<a href="https://abhay-tech-coder-abhay-tech-coder-r-virid.vercel.app/" target="_blank">
-Open Demo
-</a>
-
+<a href="https://abhay-tech-coder-abhay-tech-coder-r-virid.vercel.app/" target="_blank">Open Demo</a>
 </div>
-
 </div>
-
 </div>
-
 </section>
 
 <!-- GITHUB -->
-
 <section class="github">
-
 <h2 class="title">GitHub Activity</h2>
 
+<div class="github-buttons">
+<a class="btn2" href="https://github.com/AbhayTechCoder" target="_blank">
+<i class="fab fa-github"></i> GitHub Profile
+</a>
+
+<!-- CHANGE THIS LINK TO YOUR ACTUAL RESUME FILE -->
+<a class="btn1" href="https://docs.google.com/document/d/1uWVcV1D8-H-8pfFgeWG6ujG9IAgJt368NeHhe1GvniY/export?format=pdf" target="_blank">
+<i class="fas fa-download"></i> Download Resume
+</a>
+</div>
+
 <img src="https://github-readme-stats.vercel.app/api?username=AbhayTechCoder&show_icons=true&theme=tokyonight">
-
 <img src="https://github-readme-streak-stats.herokuapp.com/?user=AbhayTechCoder&theme=tokyonight">
-
 </section>
 
 <!-- CONTACT -->
-
 <section id="contact" class="contact">
-
 <h2 class="title">Contact</h2>
-
 <p>Let's connect and build something amazing.</p>
 
 <div class="socials">
-
 <a href="mailto:chaudharyabhay32894@gmail.com">
 <i class="fas fa-envelope"></i>
 </a>
 
-<a href="https://github.com/AbhayTechCoder">
+<a href="https://github.com/AbhayTechCoder" target="_blank">
 <i class="fab fa-github"></i>
 </a>
 
-<a href="https://in.linkedin.com/in/abhay-chaudhary-b24697263">
+<a href="https://in.linkedin.com/in/abhay-chaudhary-b24697263" target="_blank">
 <i class="fab fa-linkedin"></i>
 </a>
-
 </div>
-
 </section>
 
 <footer>
-
 © 2026 Abhay Chaudhary — Built with ❤️ & Code
-
 </footer>
 
 </body>
