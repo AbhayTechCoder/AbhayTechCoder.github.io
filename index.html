@@ -8,9 +8,15 @@
 
 <title>Abhay Chaudhary | Futuristic Portfolio</title>
 
+<!-- ===== GOOGLE FONT ===== -->
+
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
+<!-- ===== FONT AWESOME ===== -->
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+<!-- ===== AOS ===== -->
 
 <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
@@ -98,12 +104,32 @@ z-index:-2;
 background:#7c3aed;
 top:-200px;
 left:-200px;
+animation:move1 10s infinite alternate;
 }
 
 .glow2{
 background:#2563eb;
 bottom:-200px;
 right:-200px;
+animation:move2 10s infinite alternate;
+}
+
+@keyframes move1{
+0%{
+transform:translate(0,0);
+}
+100%{
+transform:translate(80px,80px);
+}
+}
+
+@keyframes move2{
+0%{
+transform:translate(0,0);
+}
+100%{
+transform:translate(-80px,-80px);
+}
 }
 
 /* ================= LOADER ================= */
@@ -129,9 +155,15 @@ animation:pulse 1.5s infinite;
 }
 
 @keyframes pulse{
-0%{opacity:.5;}
-50%{opacity:1;}
-100%{opacity:.5;}
+0%{
+opacity:.5;
+}
+50%{
+opacity:1;
+}
+100%{
+opacity:.5;
+}
 }
 
 /* ================= NAVBAR ================= */
@@ -153,7 +185,7 @@ transition:.4s;
 
 nav.scrolled{
 padding:12px 8%;
-background:rgba(5,8,22,.85);
+background:rgba(5,8,22,.9);
 }
 
 .logo{
@@ -166,7 +198,7 @@ background:linear-gradient(to right,#a855f7,#3b82f6);
 
 nav ul{
 display:flex;
-gap:22px;
+gap:20px;
 list-style:none;
 }
 
@@ -176,13 +208,15 @@ color:white;
 padding:10px 18px;
 border-radius:40px;
 font-weight:500;
-transition:.3s;
+transition:.35s ease;
 }
 
 nav ul li a:hover{
 background:linear-gradient(to right,#7c3aed,#2563eb);
-transform:translateY(-3px);
-box-shadow:0 0 20px rgba(124,58,237,.5);
+transform:translateY(-4px) scale(1.05);
+box-shadow:
+0 0 15px rgba(124,58,237,.5),
+0 0 35px rgba(37,99,235,.3);
 }
 
 /* ================= HERO ================= */
@@ -248,7 +282,7 @@ padding:14px 28px;
 border-radius:40px;
 font-weight:600;
 text-decoration:none;
-transition:.3s;
+transition:.35s ease;
 display:inline-block;
 }
 
@@ -259,7 +293,10 @@ box-shadow:0 0 25px rgba(124,58,237,.5);
 }
 
 .primary-btn:hover{
-transform:translateY(-5px);
+transform:translateY(-5px) scale(1.05);
+box-shadow:
+0 0 20px rgba(124,58,237,.5),
+0 0 40px rgba(37,99,235,.3);
 }
 
 .outline-btn{
@@ -294,6 +331,18 @@ animation:float 5s ease-in-out infinite;
 box-shadow:
 0 0 50px rgba(124,58,237,.5),
 0 0 100px rgba(37,99,235,.2);
+transition:.5s ease;
+cursor:pointer;
+}
+
+.profile-box:hover{
+transform:
+translateY(-10px)
+scale(1.03);
+
+box-shadow:
+0 0 35px rgba(124,58,237,.6),
+0 0 70px rgba(37,99,235,.3);
 }
 
 .profile-inner{
@@ -310,9 +359,15 @@ object-fit:cover;
 }
 
 @keyframes float{
-0%{transform:translateY(0px);}
-50%{transform:translateY(-18px);}
-100%{transform:translateY(0px);}
+0%{
+transform:translateY(0px);
+}
+50%{
+transform:translateY(-18px);
+}
+100%{
+transform:translateY(0px);
+}
 }
 
 /* ================= SECTION ================= */
@@ -340,12 +395,14 @@ border:1px solid rgba(255,255,255,.08);
 backdrop-filter:blur(15px);
 border-radius:28px;
 padding:35px;
-transition:.4s;
+transition:.4s ease;
 }
 
 .glass:hover{
 transform:translateY(-8px);
-box-shadow:0 0 40px rgba(124,58,237,.25);
+box-shadow:
+0 0 25px rgba(124,58,237,.35),
+0 0 50px rgba(37,99,235,.15);
 }
 
 /* ================= ABOUT ================= */
@@ -367,12 +424,57 @@ gap:22px;
 .skill{
 text-align:center;
 padding:30px 20px;
+position:relative;
+overflow:hidden;
+cursor:pointer;
+}
+
+.skill::before{
+content:'';
+position:absolute;
+top:0;
+left:-100%;
+width:100%;
+height:100%;
+background:linear-gradient(
+120deg,
+transparent,
+rgba(255,255,255,.08),
+transparent
+);
+transition:.6s;
+}
+
+.skill:hover::before{
+left:100%;
+}
+
+.skill:hover{
+transform:
+translateY(-10px)
+scale(1.04);
+
+background:linear-gradient(
+145deg,
+rgba(124,58,237,.15),
+rgba(37,99,235,.12)
+);
+
+box-shadow:
+0 0 25px rgba(124,58,237,.45),
+0 0 50px rgba(37,99,235,.2);
 }
 
 .skill i{
 font-size:2.4rem;
 margin-bottom:18px;
 color:#a855f7;
+transition:.4s ease;
+}
+
+.skill:hover i{
+transform:scale(1.2) rotate(5deg);
+color:white;
 }
 
 .skill h3{
@@ -385,6 +487,50 @@ font-size:1rem;
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
 gap:25px;
+}
+
+.project{
+position:relative;
+overflow:hidden;
+cursor:pointer;
+}
+
+.project::before{
+content:'';
+position:absolute;
+top:-100%;
+left:-100%;
+width:250%;
+height:250%;
+background:linear-gradient(
+120deg,
+transparent,
+rgba(255,255,255,.05),
+transparent
+);
+transform:rotate(25deg);
+transition:.8s;
+}
+
+.project:hover::before{
+top:100%;
+left:100%;
+}
+
+.project:hover{
+transform:
+translateY(-12px)
+scale(1.02);
+
+background:linear-gradient(
+145deg,
+rgba(124,58,237,.12),
+rgba(37,99,235,.08)
+);
+
+box-shadow:
+0 0 30px rgba(124,58,237,.45),
+0 0 60px rgba(37,99,235,.2);
 }
 
 .project h3{
@@ -403,6 +549,7 @@ margin-bottom:20px;
 display:flex;
 gap:10px;
 flex-wrap:wrap;
+margin-bottom:20px;
 }
 
 .tag{
@@ -410,6 +557,44 @@ padding:8px 14px;
 border-radius:20px;
 background:rgba(124,58,237,.2);
 font-size:.8rem;
+transition:.3s ease;
+cursor:pointer;
+}
+
+.tag:hover{
+background:linear-gradient(to right,#7c3aed,#2563eb);
+transform:translateY(-3px) scale(1.06);
+box-shadow:0 0 15px rgba(124,58,237,.4);
+}
+
+/* ================= DEMO BUTTON ================= */
+
+.demo-btn{
+display:inline-block;
+padding:12px 22px;
+border-radius:30px;
+text-decoration:none;
+font-weight:600;
+font-size:.9rem;
+color:white;
+background:linear-gradient(to right,#7c3aed,#2563eb);
+transition:.35s ease;
+box-shadow:0 0 20px rgba(124,58,237,.35);
+border:none;
+cursor:pointer;
+}
+
+.demo-btn:hover{
+transform:translateY(-5px) scale(1.05);
+box-shadow:
+0 0 25px rgba(124,58,237,.6),
+0 0 50px rgba(37,99,235,.35);
+}
+
+.developing-btn{
+background:rgba(255,255,255,.08);
+border:1px solid rgba(255,255,255,.12);
+color:#cbd5e1;
 }
 
 /* ================= CONTACT ================= */
@@ -448,13 +633,16 @@ background:rgba(255,255,255,.05);
 border:1px solid rgba(255,255,255,.08);
 color:white;
 font-size:1.2rem;
-transition:.3s;
+transition:.35s ease;
 text-decoration:none;
 }
 
 .socials a:hover{
 background:linear-gradient(to right,#7c3aed,#2563eb);
-transform:translateY(-5px);
+transform:translateY(-6px) rotate(8deg) scale(1.08);
+box-shadow:
+0 0 20px rgba(124,58,237,.5),
+0 0 40px rgba(37,99,235,.3);
 }
 
 /* ================= FOOTER ================= */
@@ -497,8 +685,6 @@ cursor:auto;
 display:none;
 }
 
-/* ===== NAVBAR ===== */
-
 nav{
 padding:14px 5%;
 flex-direction:column;
@@ -516,8 +702,6 @@ padding:8px 14px;
 font-size:.9rem;
 }
 
-/* ===== HERO ===== */
-
 .hero{
 padding:150px 5% 45px;
 gap:22px;
@@ -529,10 +713,6 @@ text-align:center;
 display:flex;
 flex-direction:column;
 align-items:center;
-}
-
-.hero-left h3{
-font-size:1rem;
 }
 
 .hero-left h1{
@@ -561,12 +741,6 @@ padding:12px 20px;
 font-size:.88rem;
 }
 
-/* ===== PROFILE ===== */
-
-.hero-right{
-margin-top:0;
-}
-
 .profile-box{
 width:220px;
 height:220px;
@@ -576,8 +750,6 @@ border-radius:26px;
 .profile-inner{
 border-radius:20px;
 }
-
-/* ===== SECTION ===== */
 
 section{
 padding:65px 5%;
@@ -593,14 +765,10 @@ padding:24px;
 border-radius:24px;
 }
 
-/* ===== ABOUT ===== */
-
 .about-text{
 font-size:.94rem;
 line-height:1.9;
 }
-
-/* ===== SKILLS ===== */
 
 .skills-grid{
 grid-template-columns:repeat(2,1fr);
@@ -615,12 +783,6 @@ padding:22px 14px;
 font-size:2rem;
 }
 
-.skill h3{
-font-size:.9rem;
-}
-
-/* ===== PROJECTS ===== */
-
 .projects-grid{
 grid-template-columns:1fr;
 }
@@ -632,8 +794,6 @@ font-size:1.3rem;
 .project p{
 font-size:.9rem;
 }
-
-/* ===== CONTACT ===== */
 
 .contact h2{
 font-size:2rem;
@@ -649,8 +809,6 @@ height:48px;
 font-size:1rem;
 }
 
-/* ===== FOOTER ===== */
-
 footer{
 font-size:.85rem;
 }
@@ -663,17 +821,27 @@ font-size:.85rem;
 
 <body>
 
+<!-- ================= LOADER ================= -->
+
 <div class="loader" id="loader">
 <h1>Abhay.dev</h1>
 </div>
 
+<!-- ================= CURSOR ================= -->
+
 <div class="cursor"></div>
 <div class="cursor2"></div>
 
+<!-- ================= PARTICLES ================= -->
+
 <div id="particles-js"></div>
+
+<!-- ================= GLOW ================= -->
 
 <div class="glow glow1"></div>
 <div class="glow glow2"></div>
+
+<!-- ================= NAVBAR ================= -->
 
 <nav id="navbar">
 
@@ -687,6 +855,8 @@ font-size:.85rem;
 </ul>
 
 </nav>
+
+<!-- ================= HERO ================= -->
 
 <section class="hero">
 
@@ -717,7 +887,7 @@ View Projects
 LinkedIn
 </a>
 
-<a href="https://mail.google.com/mail/?view=cm&fs=1&to=chaudharyabhay32894@gmail.com" target="_blank" class="btn outline-btn">
+<a href="mailto:chaudharyabhay32894@gmail.com" class="btn outline-btn">
 Contact
 </a>
 
@@ -741,13 +911,13 @@ Contact
 
 </section>
 
+<!-- ================= ABOUT ================= -->
+
 <section id="about">
 
-<h2 class="section-title" data-aos="zoom-in">
-About Me
-</h2>
+<h2 class="section-title">About Me</h2>
 
-<div class="glass" data-aos="fade-up">
+<div class="glass">
 
 <div class="about-text">
 
@@ -763,11 +933,11 @@ I’ve worked on projects including restaurant management systems, AI assistants
 
 </section>
 
+<!-- ================= SKILLS ================= -->
+
 <section id="skills">
 
-<h2 class="section-title" data-aos="zoom-in">
-Skills
-</h2>
+<h2 class="section-title">Skills</h2>
 
 <div class="skills-grid">
 
@@ -815,11 +985,11 @@ Skills
 
 </section>
 
+<!-- ================= PROJECTS ================= -->
+
 <section id="projects">
 
-<h2 class="section-title" data-aos="zoom-in">
-Projects
-</h2>
+<h2 class="section-title">Projects</h2>
 
 <div class="projects-grid">
 
@@ -838,6 +1008,10 @@ A full-stack restaurant management system with QR ordering, real-time updates, J
 <span class="tag">JWT</span>
 </div>
 
+<a href="#" class="demo-btn developing-btn">
+Developing Stage
+</a>
+
 </div>
 
 <div class="glass project">
@@ -854,6 +1028,10 @@ An intelligent AI assistant with multiple specialized agents focused on producti
 <span class="tag">APIs</span>
 <span class="tag">JavaScript</span>
 </div>
+
+<a href="#" class="demo-btn developing-btn">
+Developing Stage
+</a>
 
 </div>
 
@@ -872,11 +1050,17 @@ Research-based project involving phishing detection, endpoint protection, ethica
 <span class="tag">Security</span>
 </div>
 
+<a href="#" class="demo-btn developing-btn">
+Developing Stage
+</a>
+
 </div>
 
 </div>
 
 </section>
+
+<!-- ================= CONTACT ================= -->
 
 <section id="contact">
 
@@ -896,7 +1080,7 @@ Contact Me
 
 <div class="socials">
 
-<a href="https://github.com/" target="_blank">
+<a href="https://github.com/AbhayTechCoder" target="_blank">
 <i class="fab fa-github"></i>
 </a>
 
@@ -914,9 +1098,13 @@ Contact Me
 
 </section>
 
+<!-- ================= FOOTER ================= -->
+
 <footer>
 © 2026 Abhay Chaudhary • Designed With Passion & Code
 </footer>
+
+<!-- ================= SCRIPTS ================= -->
 
 <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 
@@ -928,6 +1116,8 @@ AOS.init({
 duration:1000,
 once:true
 });
+
+/* ================= LOADER ================= */
 
 window.addEventListener('load',()=>{
 
@@ -942,6 +1132,8 @@ document.getElementById('loader').style.display='none';
 
 });
 
+/* ================= NAVBAR ================= */
+
 window.addEventListener('scroll',()=>{
 
 const nav=document.getElementById('navbar');
@@ -955,6 +1147,8 @@ nav.classList.remove('scrolled');
 
 });
 
+/* ================= CUSTOM CURSOR ================= */
+
 const cursor=document.querySelector('.cursor');
 const cursor2=document.querySelector('.cursor2');
 
@@ -967,6 +1161,8 @@ cursor2.style.left=e.clientX+'px';
 cursor2.style.top=e.clientY+'px';
 
 });
+
+/* ================= PARTICLES ================= */
 
 particlesJS('particles-js',{
 
