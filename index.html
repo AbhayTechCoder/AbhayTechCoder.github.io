@@ -8,15 +8,9 @@
 
 <title>Abhay Chaudhary | Futuristic Portfolio</title>
 
-<!-- ===== GOOGLE FONT ===== -->
-
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-<!-- ===== FONT AWESOME ===== -->
-
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
-
-<!-- ===== AOS ===== -->
 
 <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
@@ -104,32 +98,12 @@ z-index:-2;
 background:#7c3aed;
 top:-200px;
 left:-200px;
-animation:move1 10s infinite alternate;
 }
 
 .glow2{
 background:#2563eb;
 bottom:-200px;
 right:-200px;
-animation:move2 10s infinite alternate;
-}
-
-@keyframes move1{
-0%{
-transform:translate(0,0);
-}
-100%{
-transform:translate(80px,80px);
-}
-}
-
-@keyframes move2{
-0%{
-transform:translate(0,0);
-}
-100%{
-transform:translate(-80px,-80px);
-}
 }
 
 /* ================= LOADER ================= */
@@ -155,15 +129,9 @@ animation:pulse 1.5s infinite;
 }
 
 @keyframes pulse{
-0%{
-opacity:.5;
-}
-50%{
-opacity:1;
-}
-100%{
-opacity:.5;
-}
+0%{opacity:.5;}
+50%{opacity:1;}
+100%{opacity:.5;}
 }
 
 /* ================= NAVBAR ================= */
@@ -185,7 +153,7 @@ transition:.4s;
 
 nav.scrolled{
 padding:12px 8%;
-background:rgba(5,8,22,.9);
+background:rgba(5,8,22,.85);
 }
 
 .logo{
@@ -198,7 +166,7 @@ background:linear-gradient(to right,#a855f7,#3b82f6);
 
 nav ul{
 display:flex;
-gap:20px;
+gap:22px;
 list-style:none;
 }
 
@@ -208,15 +176,13 @@ color:white;
 padding:10px 18px;
 border-radius:40px;
 font-weight:500;
-transition:.35s ease;
+transition:.3s;
 }
 
 nav ul li a:hover{
 background:linear-gradient(to right,#7c3aed,#2563eb);
-transform:translateY(-4px) scale(1.05);
-box-shadow:
-0 0 15px rgba(124,58,237,.5),
-0 0 35px rgba(37,99,235,.3);
+transform:translateY(-3px);
+box-shadow:0 0 20px rgba(124,58,237,.5);
 }
 
 /* ================= HERO ================= */
@@ -282,8 +248,9 @@ padding:14px 28px;
 border-radius:40px;
 font-weight:600;
 text-decoration:none;
-transition:.35s ease;
+transition:.3s;
 display:inline-block;
+cursor:pointer;
 }
 
 .primary-btn{
@@ -293,10 +260,7 @@ box-shadow:0 0 25px rgba(124,58,237,.5);
 }
 
 .primary-btn:hover{
-transform:translateY(-5px) scale(1.05);
-box-shadow:
-0 0 20px rgba(124,58,237,.5),
-0 0 40px rgba(37,99,235,.3);
+transform:translateY(-5px);
 }
 
 .outline-btn{
@@ -331,18 +295,6 @@ animation:float 5s ease-in-out infinite;
 box-shadow:
 0 0 50px rgba(124,58,237,.5),
 0 0 100px rgba(37,99,235,.2);
-transition:.5s ease;
-cursor:pointer;
-}
-
-.profile-box:hover{
-transform:
-translateY(-10px)
-scale(1.03);
-
-box-shadow:
-0 0 35px rgba(124,58,237,.6),
-0 0 70px rgba(37,99,235,.3);
 }
 
 .profile-inner{
@@ -359,15 +311,9 @@ object-fit:cover;
 }
 
 @keyframes float{
-0%{
-transform:translateY(0px);
-}
-50%{
-transform:translateY(-18px);
-}
-100%{
-transform:translateY(0px);
-}
+0%{transform:translateY(0px);}
+50%{transform:translateY(-18px);}
+100%{transform:translateY(0px);}
 }
 
 /* ================= SECTION ================= */
@@ -395,14 +341,12 @@ border:1px solid rgba(255,255,255,.08);
 backdrop-filter:blur(15px);
 border-radius:28px;
 padding:35px;
-transition:.4s ease;
+transition:.4s;
 }
 
 .glass:hover{
 transform:translateY(-8px);
-box-shadow:
-0 0 25px rgba(124,58,237,.35),
-0 0 50px rgba(37,99,235,.15);
+box-shadow:0 0 40px rgba(124,58,237,.25);
 }
 
 /* ================= ABOUT ================= */
@@ -424,57 +368,12 @@ gap:22px;
 .skill{
 text-align:center;
 padding:30px 20px;
-position:relative;
-overflow:hidden;
-cursor:pointer;
-}
-
-.skill::before{
-content:'';
-position:absolute;
-top:0;
-left:-100%;
-width:100%;
-height:100%;
-background:linear-gradient(
-120deg,
-transparent,
-rgba(255,255,255,.08),
-transparent
-);
-transition:.6s;
-}
-
-.skill:hover::before{
-left:100%;
-}
-
-.skill:hover{
-transform:
-translateY(-10px)
-scale(1.04);
-
-background:linear-gradient(
-145deg,
-rgba(124,58,237,.15),
-rgba(37,99,235,.12)
-);
-
-box-shadow:
-0 0 25px rgba(124,58,237,.45),
-0 0 50px rgba(37,99,235,.2);
 }
 
 .skill i{
 font-size:2.4rem;
 margin-bottom:18px;
 color:#a855f7;
-transition:.4s ease;
-}
-
-.skill:hover i{
-transform:scale(1.2) rotate(5deg);
-color:white;
 }
 
 .skill h3{
@@ -485,64 +384,33 @@ font-size:1rem;
 
 .projects-grid{
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:25px;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:30px;
+margin-top:20px;
 }
 
 .project{
 position:relative;
 overflow:hidden;
-cursor:pointer;
-}
-
-.project::before{
-content:'';
-position:absolute;
-top:-100%;
-left:-100%;
-width:250%;
-height:250%;
-background:linear-gradient(
-120deg,
-transparent,
-rgba(255,255,255,.05),
-transparent
-);
-transform:rotate(25deg);
-transition:.8s;
-}
-
-.project:hover::before{
-top:100%;
-left:100%;
-}
-
-.project:hover{
-transform:
-translateY(-12px)
-scale(1.02);
-
-background:linear-gradient(
-145deg,
-rgba(124,58,237,.12),
-rgba(37,99,235,.08)
-);
-
-box-shadow:
-0 0 30px rgba(124,58,237,.45),
-0 0 60px rgba(37,99,235,.2);
+display:flex;
+flex-direction:column;
 }
 
 .project h3{
 font-size:1.5rem;
 margin-bottom:15px;
 color:#a855f7;
+display:flex;
+align-items:center;
+flex-wrap:wrap;
+gap:10px;
 }
 
 .project p{
 line-height:1.8;
 color:#cbd5e1;
 margin-bottom:20px;
+flex-grow:1;
 }
 
 .tags{
@@ -553,48 +421,41 @@ margin-bottom:20px;
 }
 
 .tag{
-padding:8px 14px;
+padding:6px 14px;
 border-radius:20px;
 background:rgba(124,58,237,.2);
-font-size:.8rem;
-transition:.3s ease;
-cursor:pointer;
+font-size:.75rem;
+font-weight:500;
 }
 
-.tag:hover{
-background:linear-gradient(to right,#7c3aed,#2563eb);
-transform:translateY(-3px) scale(1.06);
-box-shadow:0 0 15px rgba(124,58,237,.4);
-}
-
-/* ================= DEMO BUTTON ================= */
-
-.demo-btn{
-display:inline-block;
-padding:12px 22px;
-border-radius:30px;
-text-decoration:none;
-font-weight:600;
-font-size:.9rem;
+.live-badge{
+background:linear-gradient(135deg,#10b981,#059669);
 color:white;
-background:linear-gradient(to right,#7c3aed,#2563eb);
-transition:.35s ease;
-box-shadow:0 0 20px rgba(124,58,237,.35);
-border:none;
-cursor:pointer;
+font-size:0.7rem;
+font-weight:600;
+padding:4px 12px;
+border-radius:40px;
+display:inline-flex;
+align-items:center;
+gap:6px;
+box-shadow:0 0 10px rgba(16,185,129,0.5);
 }
 
-.demo-btn:hover{
-transform:translateY(-5px) scale(1.05);
-box-shadow:
-0 0 25px rgba(124,58,237,.6),
-0 0 50px rgba(37,99,235,.35);
+.live-badge i{
+font-size:0.7rem;
+color:white;
 }
 
-.developing-btn{
-background:rgba(255,255,255,.08);
-border:1px solid rgba(255,255,255,.12);
-color:#cbd5e1;
+.project-buttons{
+display:flex;
+gap:12px;
+flex-wrap:wrap;
+margin-top:10px;
+}
+
+.project-btn{
+padding:10px 20px;
+font-size:0.85rem;
 }
 
 /* ================= CONTACT ================= */
@@ -633,16 +494,13 @@ background:rgba(255,255,255,.05);
 border:1px solid rgba(255,255,255,.08);
 color:white;
 font-size:1.2rem;
-transition:.35s ease;
+transition:.3s;
 text-decoration:none;
 }
 
 .socials a:hover{
 background:linear-gradient(to right,#7c3aed,#2563eb);
-transform:translateY(-6px) rotate(8deg) scale(1.08);
-box-shadow:
-0 0 20px rgba(124,58,237,.5),
-0 0 40px rgba(37,99,235,.3);
+transform:translateY(-5px);
 }
 
 /* ================= FOOTER ================= */
@@ -655,24 +513,6 @@ border-top:1px solid rgba(255,255,255,.08);
 }
 
 /* ================= RESPONSIVE ================= */
-
-@media(max-width:900px){
-
-.hero{
-padding:120px 6% 60px;
-gap:35px;
-}
-
-.hero-left h1{
-font-size:3.2rem;
-}
-
-.profile-box{
-width:270px;
-height:270px;
-}
-
-}
 
 @media(max-width:768px){
 
@@ -697,11 +537,6 @@ justify-content:center;
 gap:8px;
 }
 
-nav ul li a{
-padding:8px 14px;
-font-size:.9rem;
-}
-
 .hero{
 padding:150px 5% 45px;
 gap:22px;
@@ -717,38 +552,11 @@ align-items:center;
 
 .hero-left h1{
 font-size:2.5rem;
-margin-bottom:14px;
-}
-
-.typing{
-font-size:1rem;
-margin-bottom:18px;
-}
-
-.hero-left p{
-font-size:.94rem;
-line-height:1.8;
-margin-bottom:25px;
-}
-
-.buttons{
-justify-content:center;
-gap:12px;
-}
-
-.btn{
-padding:12px 20px;
-font-size:.88rem;
 }
 
 .profile-box{
 width:220px;
 height:220px;
-border-radius:26px;
-}
-
-.profile-inner{
-border-radius:20px;
 }
 
 section{
@@ -757,60 +565,23 @@ padding:65px 5%;
 
 .section-title{
 font-size:2rem;
-margin-bottom:35px;
-}
-
-.glass{
-padding:24px;
-border-radius:24px;
-}
-
-.about-text{
-font-size:.94rem;
-line-height:1.9;
 }
 
 .skills-grid{
 grid-template-columns:repeat(2,1fr);
-gap:14px;
-}
-
-.skill{
-padding:22px 14px;
-}
-
-.skill i{
-font-size:2rem;
 }
 
 .projects-grid{
 grid-template-columns:1fr;
+gap:20px;
 }
 
-.project h3{
-font-size:1.3rem;
+.project-buttons{
+flex-direction:column;
 }
 
-.project p{
-font-size:.9rem;
-}
-
-.contact h2{
-font-size:2rem;
-}
-
-.contact p{
-font-size:.92rem;
-}
-
-.socials a{
-width:48px;
-height:48px;
-font-size:1rem;
-}
-
-footer{
-font-size:.85rem;
+.project-btn{
+text-align:center;
 }
 
 }
@@ -821,27 +592,17 @@ font-size:.85rem;
 
 <body>
 
-<!-- ================= LOADER ================= -->
-
 <div class="loader" id="loader">
 <h1>Abhay.dev</h1>
 </div>
 
-<!-- ================= CURSOR ================= -->
-
 <div class="cursor"></div>
 <div class="cursor2"></div>
 
-<!-- ================= PARTICLES ================= -->
-
 <div id="particles-js"></div>
-
-<!-- ================= GLOW ================= -->
 
 <div class="glow glow1"></div>
 <div class="glow glow2"></div>
-
-<!-- ================= NAVBAR ================= -->
 
 <nav id="navbar">
 
@@ -855,8 +616,6 @@ font-size:.85rem;
 </ul>
 
 </nav>
-
-<!-- ================= HERO ================= -->
 
 <section class="hero">
 
@@ -887,7 +646,7 @@ View Projects
 LinkedIn
 </a>
 
-<a href="mailto:chaudharyabhay32894@gmail.com" class="btn outline-btn">
+<a href="mailto:chaudharyabhay32894@gmail.com" target="_blank" class="btn outline-btn">
 Contact
 </a>
 
@@ -911,21 +670,21 @@ Contact
 
 </section>
 
-<!-- ================= ABOUT ================= -->
-
 <section id="about">
 
-<h2 class="section-title">About Me</h2>
+<h2 class="section-title" data-aos="zoom-in">
+About Me
+</h2>
 
-<div class="glass">
+<div class="glass" data-aos="fade-up">
 
 <div class="about-text">
 
-I’m Abhay Chaudhary, a final-year B.Tech Computer Science student passionate about Full Stack Development, Cybersecurity, AI tools, and futuristic web experiences.
+I'm Abhay Chaudhary, a final-year B.Tech Computer Science student passionate about Full Stack Development, Cybersecurity, AI tools, and futuristic web experiences.
 
 I specialize in building secure backend systems, modern frontend interfaces, REST APIs, JWT authentication flows, and scalable digital products using React.js, Node.js, Express.js, MongoDB, and JavaScript.
 
-I’ve worked on projects including restaurant management systems, AI assistants, cybersecurity research tools, and interactive full-stack web applications.
+I've worked on projects including restaurant management systems, AI assistants, cybersecurity research tools, and interactive full-stack web applications.
 
 </div>
 
@@ -933,11 +692,11 @@ I’ve worked on projects including restaurant management systems, AI assistants
 
 </section>
 
-<!-- ================= SKILLS ================= -->
-
 <section id="skills">
 
-<h2 class="section-title">Skills</h2>
+<h2 class="section-title" data-aos="zoom-in">
+Skills
+</h2>
 
 <div class="skills-grid">
 
@@ -985,82 +744,87 @@ I’ve worked on projects including restaurant management systems, AI assistants
 
 </section>
 
-<!-- ================= PROJECTS ================= -->
-
 <section id="projects">
 
-<h2 class="section-title">Projects</h2>
+<h2 class="section-title" data-aos="zoom-in">
+Projects
+</h2>
 
 <div class="projects-grid">
 
-<div class="glass project">
-
+<!-- Project 1: RestroQR -->
+<div class="glass project" data-aos="fade-up" data-aos-delay="0">
 <h3>RestroQR</h3>
-
-<p>
-A full-stack restaurant management system with QR ordering, real-time updates, JWT authentication, responsive dashboard, and modern UI experience.
-</p>
-
+<p>A full-stack restaurant management system with QR ordering, real-time updates, JWT authentication, responsive dashboard, and modern UI experience.</p>
 <div class="tags">
 <span class="tag">React</span>
 <span class="tag">Node.js</span>
 <span class="tag">MongoDB</span>
 <span class="tag">JWT</span>
 </div>
-
-<a href="https://abhay-tech-coder-abhay-tech-coder-r-virid.vercel.app/" class="demo-btn developing-btn">
-LIVE
-</a>
-
+<div class="project-buttons">
+<a href="#" class="btn outline-btn project-btn"><i class="fab fa-github"></i> Code</a>
+<a href="#" class="btn primary-btn project-btn"><i class="fas fa-external-link-alt"></i> Live</a>
+</div>
 </div>
 
-<div class="glass project">
-
+<!-- Project 2: AI Assistant -->
+<div class="glass project" data-aos="fade-up" data-aos-delay="100">
 <h3>AI Assistant</h3>
-
-<p>
-An intelligent AI assistant with multiple specialized agents focused on productivity, automation, and smart interactions.
-</p>
-
+<p>An intelligent AI assistant with multiple specialized agents focused on productivity, automation, and smart interactions using modern AI APIs.</p>
 <div class="tags">
 <span class="tag">AI</span>
 <span class="tag">Automation</span>
 <span class="tag">APIs</span>
 <span class="tag">JavaScript</span>
 </div>
-
-<a href="#" class="demo-btn developing-btn">
-Developing Stage
-</a>
-
+<div class="project-buttons">
+<a href="#" class="btn outline-btn project-btn"><i class="fab fa-github"></i> Code</a>
+<a href="#" class="btn primary-btn project-btn"><i class="fas fa-external-link-alt"></i> Live</a>
+</div>
 </div>
 
-<div class="glass project">
-
+<!-- Project 3: Cybersecurity Research -->
+<div class="glass project" data-aos="fade-up" data-aos-delay="200">
 <h3>Cybersecurity Research</h3>
-
-<p>
-Research-based project involving phishing detection, endpoint protection, ethical hacking, and web vulnerability testing methodologies.
-</p>
-
+<p>Research-based project involving phishing detection, endpoint protection, ethical hacking, and web vulnerability testing methodologies.</p>
 <div class="tags">
 <span class="tag">Linux</span>
 <span class="tag">Burp Suite</span>
 <span class="tag">Nmap</span>
 <span class="tag">Security</span>
 </div>
+<div class="project-buttons">
+<a href="#" class="btn outline-btn project-btn"><i class="fab fa-github"></i> Code</a>
+<a href="#" class="btn primary-btn project-btn"><i class="fas fa-external-link-alt"></i> Live</a>
+</div>
+</div>
 
-<a href="#" class="demo-btn developing-btn">
-Developing Stage
-</a>
-
+<!-- Project 4: Bhumi-AI (NEW - ADDED WITH LIVE STATUS) -->
+<div class="glass project" data-aos="fade-up" data-aos-delay="300">
+<h3>
+Bhumi-AI 
+<span class="live-badge">
+<i class="fas fa-circle"></i> LIVE
+</span>
+</h3>
+<p>Bhumi-AI is a futuristic AI-powered platform focused on smart interactions, modern frontend UI/UX, and scalable architecture. The frontend is successfully deployed on Vercel with a sleek, responsive interface. Backend services and advanced AI integrations are currently under active development.</p>
+<div class="tags">
+<span class="tag">React</span>
+<span class="tag">AI/ML</span>
+<span class="tag">Vercel</span>
+<span class="tag">Frontend</span>
+<span class="tag">Live</span>
+</div>
+<div class="project-buttons">
+<a href="https://github.com/AbhayTechCoder/bhumi-ai" target="_blank" class="btn outline-btn project-btn"><i class="fab fa-github"></i> View Code</a>
+<a href="https://bhumi-ai-eight.vercel.app" target="_blank" class="btn primary-btn project-btn"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+</div>
 </div>
 
 </div>
 
 </section>
-
-<!-- ================= CONTACT ================= -->
 
 <section id="contact">
 
@@ -1098,13 +862,9 @@ Contact Me
 
 </section>
 
-<!-- ================= FOOTER ================= -->
-
 <footer>
 © 2026 Abhay Chaudhary • Designed With Passion & Code
 </footer>
-
-<!-- ================= SCRIPTS ================= -->
 
 <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 
@@ -1114,10 +874,9 @@ Contact Me
 
 AOS.init({
 duration:1000,
-once:true
+once:true,
+offset:100
 });
-
-/* ================= LOADER ================= */
 
 window.addEventListener('load',()=>{
 
@@ -1132,8 +891,6 @@ document.getElementById('loader').style.display='none';
 
 });
 
-/* ================= NAVBAR ================= */
-
 window.addEventListener('scroll',()=>{
 
 const nav=document.getElementById('navbar');
@@ -1146,8 +903,6 @@ nav.classList.remove('scrolled');
 }
 
 });
-
-/* ================= CUSTOM CURSOR ================= */
 
 const cursor=document.querySelector('.cursor');
 const cursor2=document.querySelector('.cursor2');
@@ -1162,13 +917,11 @@ cursor2.style.top=e.clientY+'px';
 
 });
 
-/* ================= PARTICLES ================= */
-
 particlesJS('particles-js',{
 
 particles:{
 number:{
-value:60
+value:80
 },
 color:{
 value:'#ffffff'
@@ -1177,14 +930,16 @@ shape:{
 type:'circle'
 },
 opacity:{
-value:.25
+value:.2
 },
 size:{
-value:2.5
+value:2
 },
 move:{
 enable:true,
-speed:1
+speed:0.8,
+direction:'none',
+random:true
 }
 },
 
